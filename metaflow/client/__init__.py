@@ -13,4 +13,6 @@ from .core import (
     Step,
     Task,
     DataArtifact,
+    TaskStatus,
+    RunStatus,
 )
