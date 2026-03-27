@@ -41,8 +41,7 @@ def suffix_filter(suffixes: List[str]) -> Callable[[str], bool]:
     def _filter(fname: str) -> bool:
         fname = fname.lower()
         return (
-            suffixes is None
-            or (fname[0] == "." and fname in suffixes)
+            (fname[0] == "." and fname in suffixes)
             or (fname[0] != "." and any(fname.endswith(suffix) for suffix in suffixes))
         )
 
